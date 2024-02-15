@@ -1,0 +1,132 @@
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+   
+}
+.container{
+    max-width: 1240px;
+    padding: 0 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+nav .box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.box > li{
+    padding: 30px;
+    position: relative;
+}
+.box > li::before{
+    content: "";
+    background-color: yellow;
+    position: absolute;
+}
+.drop{
+    position: relative;
+}
+
+.drop-menu{
+    position: absolute;
+    top: 50px;
+    background-color: white; 
+    padding: 20px;
+    visibility: hidden;
+    left: 50%;
+   
+}
+.drop-menu::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+}
+.drop:hover .drop-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px);
+}
+button{
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+button:nth-child(1){
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+button{
+    color: black;
+    cursor: pointer;
+}
+
+
+.grid{
+    background-image: linear-gradient(to left top,red,rgb(255, 123, 0));
+    height: 200px;
+    position: relative;
+   
+}
+
+.grid .container{
+    height: 100%;
+    align-items: self-end;
+    position: relative;
+    color: #fff;
+}
+
+
+.task{
+    padding: 50px 50px;
+   
+}
+
+
+.card{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   grid-template-columns: repeat(3,1fr);
+   width: 900px;
+   height: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+    row-gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+.task img{
+     align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    display: block;
+    width: 100%;
+   transform: translateX(-40%);
+
+}
+.text h4{
+    color: orange;
+}
+.text button{
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 0 px 0px 10px 0 px solid grey;
+    transition: all 0.8s;
+}
